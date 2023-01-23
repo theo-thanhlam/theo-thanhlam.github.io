@@ -86,14 +86,15 @@
                                         </div>
                                         <div class="col-sm-6 col-md-7">
                                             <div class="about-info">
-                                                <p><span class="title-s">Name: </span> <span>Theo Lam</span></p>
+                                                <p><span class="title-s">Name: </span> <span>Thanh Phat Lam</span></p>
+                                                <p><span class="title-s">Preferred Name: </span> <span>Theo</span></p>
                                                 <p><span class="title-s">Profile: </span> <span>Software Engineering
                                                         Student</span></p>
 
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="col-md-6">
                                     <div class="about-me pt-4 pt-md-0">
@@ -102,7 +103,10 @@
                                                 About me
                                             </h5>
                                         </div>
-                                        <p class="lead">
+                                        <div id="aboutme-content">
+
+                                        </div>
+                                        <!-- <p class="lead">
                                             Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur
                                             arcu erat, accumsan id
                                             imperdiet et, porttitor
@@ -121,57 +125,55 @@
                                             in, elementum id enim.
                                             Nulla porttitor accumsan
                                             tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                                        </p>
+                                        </p> -->
 
                                     </div>
-                                    <div class="container-fluid">
-                                        <div class="about-me pt-4 pt-md-0">
-                                            <div class="title-box-2">
-                                                <h5 class="title-left">
-                                                    Connect with me
-                                                </h5>
+                                    <div class="about-me pt-4 pt-md-0">
+                                        <div class="title-box-2">
+                                            <h5 class="title-left">
+                                                Connect with me
+                                            </h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <a href="https://www.facebook.com/thanhphat.theo">
+                                                    <img
+                                                        src="https://img.icons8.com/ios-filled/50/null/facebook-new.png" />
+                                                </a>
                                             </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="https://www.facebook.com/thanhphat.theo">
-                                                        <img
-                                                            src="https://img.icons8.com/ios-filled/50/null/facebook-new.png" />
-                                                    </a> 
-                                                </div>
 
-                                                <div class="col">
-                                                    <a href="https://www.instagram.com/thanhphat.theo/">
-                                                        <img
-                                                            src="https://img.icons8.com/ios-filled/50/null/instagram-new--v1.png" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="col">
-                                                    <a href="https://www.linkedin.com/in/thanhphatlam/">
-                                                        <img
-                                                            src="https://img.icons8.com/ios-filled/50/null/linkedin-circled--v1.png" />
-                                                    </a> 
-                                                </div>
-
-                                                <div class="col">
-                                                    <a href="https://github.com/theo-thanhlam">
-                                                        <img
-                                                            src="https://img.icons8.com/ios-filled/50/null/github.png" />
-                                                    </a> 
-                                                </div>
-
-                                               
-
+                                            <div class="col">
+                                                <a href="https://www.instagram.com/thanhphat.theo/">
+                                                    <img
+                                                        src="https://img.icons8.com/ios-filled/50/null/instagram-new--v1.png" />
+                                                </a>
                                             </div>
+
+                                            <div class="col">
+                                                <a href="https://www.linkedin.com/in/thanhphatlam/">
+                                                    <img
+                                                        src="https://img.icons8.com/ios-filled/50/null/linkedin-circled--v1.png" />
+                                                </a>
+                                            </div>
+
+                                            <div class="col">
+                                                <a href="https://github.com/theo-thanhlam">
+                                                    <img src="https://img.icons8.com/ios-filled/50/null/github.png" />
+                                                </a>
+                                            </div>
+
+
 
                                         </div>
 
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
         </section><!-- End About Section -->
@@ -540,6 +542,21 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Text extract script -->
+    <script>
+        var content = document.getElementById("aboutme-content");
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "assets/text_file/aboutme.txt", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                content.innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+
+    </script>
 
 </body>
 
