@@ -11,3 +11,6 @@ function txt_to_html(id, filename) {
     };
     xhr.send();
 }
+
+txt_to_html('aboutme-content','aboutme.txt');
+txt_to_html('getintouch-content','getintouch.txt');
